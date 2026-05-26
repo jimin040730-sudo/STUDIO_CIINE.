@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+     font-family: 'Suit';
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+    letter-spacing: 1px;
+}
+.left {
+    text-align: left;
+}
+
+/* 마우스 커서 */
+
+.custom-cursor{
+  width:28px;
+  height:28px;
+  border:1px solid rgba(216, 216, 216, 0.9);
+  border-radius:50%;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  pointer-events:none;
+  z-index:999999;
+
+  transform:translate(-50%,-50%);
+
+  transition:
+    width .3s ease,
+    height .3s ease,
+    background .3s ease;
+
+  backdrop-filter: blur(1.5px);
+}
+
+.custom-cursor.active{
+  width:70px;
+  height:70px;
+  background:rgba(255,255,255,.05);
+}
+
+/* ==============================header_wrap============================ */
+
+#header_wrap {
+    height: 60px;
+    background-color: #ffffffcc;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    height: 60px;
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.logo a img {
+    height: 40px;
+}
+
+.util {
+    display: flex;
+}
+
+.util>li>a {
+    display: block;
+    padding: 8px 0px 16px 0px;
+    width: 150px;
+    border-bottom: 1px solid #ffffff00;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.util>li>a:hover {
+    font-weight: bold;
+}
+
+.SMN_effect-49 a {
+  transition: 0.35s;
+}
+
+.SMN_effect-49 a:hover {
+  text-shadow: 0 0 20px #000000;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* submenu */
+
+.submenu {
+    width: 100%;
+    display: none;
+}
+
+.submenu>li>a {
+    display: block;
+    background-color: #ffffffd2;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.submenu>li>a:hover {
+    background-color: #ffffff93;
+    border-bottom: 1px solid #888888;
+    font-weight: 600;
+}
+
+.util>li:hover .submenu {
+    display: block;
+}
+
+
+/* =====================refund_wrap============================== */
+
+
+
+#refund_wrap {
+    height: 1020px;
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 150px;
+}
+
+@font-face {
+    font-family: 'HeadingNowTrial-65Medium';
+    src: url('../폰트/HeadingNowTrial-65Medium.ttf') format('truetype');
+}
+
+#refund_wrap>h2 {
+    font-family: 'HeadingNowTrial-65Medium';
+    font-size: 40px;
+    font-weight: 700;
+    background-color: #e6e6e6;
+    width: 580px;
+    padding: 30px 0;
+    margin-left: 370px;
+    margin-bottom: 20px;
+}
+
+.refund_box {
+    width: 1320px;
+    height: 630px;
+    border: 1px solid #333;
+    margin: 100px 0;
+    padding: 50px 0px;
+    box-sizing: border-box;
+}
+
+.refund {
+    display: flex;
+    justify-content: space-between;
+}
+
+.refund>li {
+    width: 660px;
+    height: 530px;
+    padding: 0 40px;
+}
+
+.refund li:nth-child(1) {
+    border-right: 1px solid #8F8F8F;
+}
+
+.h33 {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 800;
+    padding: 0 30px;
+}
+
+.h33>div {
+    width: 1px;
+    height: 32px;
+    background-color: #8F8F8F;
+}
+
+.refund>li>h4 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.refund>li>p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.bold {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+table {
+    width: 580px;
+    height: 210px;
+    background-color: #f1f1f1;
+    margin-top: 60px;
+    border: 2px solid #333;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 20px;
+    border: 1px solid #333;
+}
+
+td {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 10px;
+    border: 1px solid #333;
+}
+
+.re_no {
+    width: 580px;
+    height: 210px;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 75px;
+    margin-top: 70px;
+}
+
+.re_no>p {
+    text-align: left;
+    color: rgb(219, 0, 0);
+    padding-left: 20px;
+}
+
+.re_no>.bold {
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+/* =======================faq_wrap============================= */
+
+#faq_wrap {
+    width: 1320px;
+    margin: 0 auto;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 250px;
+}
+
+#faq_wrap>h2 {
+    font-family: 'HeadingNowTrial-65Medium';
+    background-color: #e6e6e6;
+    width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px 0 24px 0;
+    margin: 150px 0px 100px 310px;
+}
+
+/*제목부분*/
+.title {
+    overflow: hidden;
+    padding: 10px 10px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 20px 0;
+}
+
+.title_in {
+    float: left;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.plus {
+    float: right;
+    margin-right: 10px;
+}
+
+.text_info {
+    padding: 20px 30px;
+    background: #f3f3f3;
+    display: none;
+    line-height: 28px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+
+/*+모양 회전관련 속성. 요부분은 반드시 복사해서 가져가세요~*/
+.turn .title img {
+    transform: rotate(45deg);
+}
+
+.plus img {
+    transition: transform 0.5s;
+}
+
+/* ===========================================footer_wrap====================== */
+
+#footer_wrap {
+    height: 400px;
+    background-color: #333;
+    margin-top: 150px;
+}
+
+.footer {
+    width: 1320px;
+    height: 400px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.footer_logo a img {
+    height: 50px;
+    padding-bottom: 40px;
+}
+
+.f_gnb {
+    display: flex;
+    float: left;
+}
+
+.f_gnb li a {
+    display: block;
+    color: #666666;
+    margin-right: 60px;
+    margin-bottom: 40px;
+}
+
+.f_gnb li a:hover {
+    color: #acacac;
+    text-decoration: underline;
+}
+
+.footer p {
+    color: #666666;
+    clear: both;
+}
+
+.f_gnb>span {
+    font-size: small;
+}

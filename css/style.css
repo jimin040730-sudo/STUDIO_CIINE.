@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+     font-family: 'Suit';
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/* 마우스 커서 */
+
+.custom-cursor {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(216, 216, 216, 0.9);
+    border-radius: 50%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+    z-index: 999999;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        width .3s ease,
+        height .3s ease,
+        background .3s ease;
+
+    backdrop-filter: blur(1.5px);
+}
+
+.custom-cursor.active {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, .05);
+}
+
+
+/* wrap */
+
+#wrap {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+
+    height: 1080px;
+    position: relative;
+}
+
+.cover1 {
+    background: url(../images/home_color1.png) no-repeat center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+
+    color: #fff;
+}
+
+.cover2 {
+    background: url(../images/home_color2.png) no-repeat center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: -100px;
+}
+
+@font-face {
+    font-family: 'HeadingNowTrial-65Medium';
+    src: url('../font/HeadingNowTrial-65Medium.ttf') format('truetype');
+}
+
+.cover1>h1 {
+    font-family: 'HeadingNowTrial-65Medium';
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+@font-face {
+    font-family: 'FUTRFW';
+    src: url('../font/FUTRFW.TTF') format('truetype');
+}
+
+.cover2>h1 {
+    font-family: 'FUTRFW';
+}
+
+.button {
+    background-color: #ffffff60;
+    width: 130px;
+    margin-top: 20px;
+    padding: 6px 0;
+}
+
+.button:hover {
+    background-color: #ffffff9c;
+}
+
+.button a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+/* 애니메이션 */
+
+/* 가로스크롤 방지 */
+body {
+    overflow-x: hidden;
+}
+
+/* 페이지 전환 레이어 */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.8s ease;
+}
+
+/* 활성화 */
+.page-transition.active {
+    opacity: 1;
+}
+
+/* li */
+#wrap ul li{
+
+    position: relative;
+
+    transition:
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.4s ease,
+    filter 1.4s ease;
+}
+
+/* 이미지 박스 */
+#wrap ul li>div:first-child {
+    overflow: hidden;
+    transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 클릭된 화면 */
+#wrap ul li.active{
+
+    z-index: 99999;
+
+    transform: scale(1.35);
+
+    transform-origin: center;
+}
+
+
+/* 클릭된 이미지 */
+#wrap ul li.active img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    animation: imageZoom 1.8s ease forwards;
+}
+
+/* 이미지 줌 */
+@keyframes imageZoom {
+    from {
+        transform: scale(1);
+        filter: blur(0px) brightness(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        filter: blur(12px) brightness(1.45);
+        opacity: 0.75;
+    }
+}
+
+/* 이미지 */
+#wrap ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1), filter 2s ease, opacity 2s ease;
+}

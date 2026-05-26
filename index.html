@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIINE.</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 내가 꾸민 css -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/home_color1.png">
+    <!-- 파비콘 -->
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <!-- 마우스 커서 -->
+
+    <div id="wrap">
+        <ul>
+            <li>
+                <div><img src="./images/home1.png" alt="home1"></div>
+                <div class="cover1">
+                    <h1>STUDIO CIINE.</h1>
+                    <div class="button">
+                        <a href="./studio_main.html" target="_blank" class="main-link">VISIT NOW</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div><img src="./images/home2.png" alt="home2"></div>
+                <div class="cover2">
+                    <h1>CIINE DRESS</h1>
+                    <div class="button">
+                        <a href="./dress_shop.html" target="_blank" class="main-link">VISIT NOW</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-transition"></div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <!-- CDN 형식으로 들고온 제이쿼리 -->
+    <script src="./js/script.js"></script>
+    <!-- 내가 만든 제이쿼리 -->
+
+<script>
+
+const links = document.querySelectorAll('.main-link');
+
+const allLi =
+document.querySelectorAll('#wrap ul li');
+
+links.forEach(link => {
+
+    link.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        const currentLi = link.closest('li');
+
+        // 클릭된 것 크게
+        currentLi.classList.add('active');
+
+        // 나머지는 작게
+        allLi.forEach(li => {
+
+            if(li !== currentLi){
+                li.classList.add('shrink');
+            }
+
+        });
+
+        // 화이트 transition
+        const transition =
+        document.querySelector('.page-transition');
+
+        setTimeout(() => {
+
+            transition.classList.add('active');
+
+        }, 800);
+
+        // 페이지 이동
+        setTimeout(() => {
+
+            window.location.href = link.href;
+
+        }, 1500);
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,769 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+     font-family: 'Suit';
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* 마우스 커서 */
+
+.custom-cursor{
+  width:28px;
+  height:28px;
+  border:1px solid rgba(216, 216, 216, 0.9);
+  border-radius:50%;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  pointer-events:none;
+  z-index:999999;
+
+  transform:translate(-50%,-50%);
+
+  transition:
+    width .3s ease,
+    height .3s ease,
+    background .3s ease;
+
+  backdrop-filter: blur(1.5px);
+}
+
+.custom-cursor.active{
+  width:70px;
+  height:70px;
+  background:rgba(255,255,255,.05);
+}
+
+
+/* ==============================header_wrap============================ */
+
+#header_wrap {
+    height: 60px;
+    background-color: #ffffffcc;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    height: 60px;
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.logo a img {
+    height: 40px;
+}
+
+.util {
+    display: flex;
+}
+
+.util>li>a {
+    display: block;
+    padding: 8px 0px 16px 0px;
+    width: 150px;
+    border-bottom: 1px solid #ffffff00;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.util>li>a:hover {
+    font-weight: bold;
+}
+
+.SMN_effect-49 a {
+  transition: 0.35s;
+}
+
+.SMN_effect-49 a:hover {
+  text-shadow: 0 0 20px #000000;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* submenu */
+
+.submenu {
+    width: 100%;
+    display: none;
+    
+}
+
+.submenu>li>a {
+    display: block;
+    background-color: #ffffffd2;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.submenu>li>a:hover {
+    background-color: #ffffff93;
+    border-bottom: 1px solid #888888;
+    font-weight: 600;
+}
+
+.util>li:hover .submenu {
+    display: block;
+}
+
+/* main */
+
+.main {
+    height: 1080px;
+    background: url(../images/main_banner.png) no-repeat center;
+}
+
+.main p,
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 50px;
+    padding-top: 450px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    font-family: 'HeadingNowTrial-65Medium';
+    letter-spacing: 5px;
+}
+
+.main p {
+    font-size: 18px;
+}
+
+/* =====================text_flow_wrap======================= */
+
+#wrap {
+    font-size: 100px;
+    font-weight: bold;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flow 20s linear infinite reverse;
+    white-space: nowrap;
+    /* 한줄을 그대로 보존해 준다 */
+}
+
+.text_flow {
+    display: flex;
+}
+
+.text_flow p {
+    font-size: 30px;
+    margin: 20px 60px;
+}
+
+.text_flow img {
+    height: 20px;
+    padding-top: 25px;
+}
+
+
+@keyframes flow {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* =======================best_wrap=========================== */
+
+#best_wrap {
+    height: 850px;
+}
+
+.best {
+    height: 850px;
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'HeadingNowTrial-65Medium';
+    src: url('../폰트/HeadingNowTrial-65Medium.ttf') format('truetype');
+}
+
+h3 {
+    font-size: 40px;
+    padding: 150px 0px 100px 100px;
+    letter-spacing: 3px;
+    font-family: 'HeadingNowTrial-65Medium';
+    letter-spacing: 3px;
+    font-weight: 900;
+}
+
+.b_box {
+    display: flex;
+    width: 3600px;
+}
+
+.b_box li {
+    width: 100%;
+    height: 500px;
+}
+
+.b_box li .b_img {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+}
+
+.b_img a img{
+    transition: all 0.4s;
+}
+
+.b_box li:hover .b_img a img {
+    transform: scale(1.1, 1.1);
+    transition: all 0.4s;
+}
+
+.img_track {
+    animation: flow 25s linear infinite reverse;
+}
+
+@keyframes flow {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+h4 {
+    padding: 15px 0px 3px 20px;
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 14px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: #858585;
+}
+
+/* ======================portfolio================================ */
+
+
+
+/* 공통 꾸미기 */
+
+#portfolio {
+    height: 3450px;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+#portfolio p {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.cover {
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.button {
+    background-color: #ffffff60;
+    width: 200px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background-color: #ffffffb4;
+}
+
+.button a {
+    display: block;
+    color: #333;
+    font-size: 24px;
+    padding: 12px 0 10px 20px;
+}
+
+.button a img {
+    height: 20px;
+}
+
+.button6 a img {
+    margin-right: 10px;
+}
+
+/* ==========p_box1========== */
+
+.p_box1 {
+    width: 1320px;
+    height: 800px;
+    box-sizing: border-box;
+    position: relative;
+    /* popup의 기준 */
+}
+
+.p_box1 ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_box1 ul li:nth-child(1) {
+    width: 600px;
+    height: 800px;
+    background: url(../images/portfolio1.png) no-repeat center;
+}
+
+.p_box1 ul li:nth-child(2) {
+    width: 680px;
+    height: 800px;
+    background: url(../images/portfolio2.png) no-repeat right 0 bottom 0;
+}
+
+.p_box1 ul li:nth-child(2) p {
+    padding: 110px 0px 110px 20px;
+}
+
+.cover1 {
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 375px 0px 0px 200px;
+    box-sizing: border-box;
+}
+
+.cover2 {
+    width: 680px;
+    height: 480px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 215px 0px 0px 240px;
+}
+
+/* -------popup1,2-------- */
+
+.popup1 {
+    height: 800px;
+    width: 1320px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff url(../images/portfolio1.png) no-repeat left 0 center;
+    box-sizing: border-box;
+    padding: 250px 0 0 700px;
+    display: none;
+    box-shadow: 0px 0px 10px #adadad;
+}
+
+.popup2 {
+    height: 480px;
+    width: 1320px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff url(../images/portfolio2.png) no-repeat right 0 center;
+    padding: 100px 0 0 100px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #adadad;
+}
+
+h6 {
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+
+.popup>h4 {
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.popup>h5 {
+    padding: 0;
+    line-height: 28px;
+}
+
+.popup>h6:hover {
+    background: url(../images/go_link.png) no-repeat left 300px center;
+}
+
+.popup>h5:hover {
+    background: url(../images/go_link.png) no-repeat left 300px center;
+}
+
+.popup>h4:hover {
+    background: url(../images/go_link.png) no-repeat left 300px center;
+}
+
+.close1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+.close2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+/* ========p_box2======= */
+
+.p_box2 {
+    height: 1070px;
+    width: 1320px;
+    margin-top: 50px;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    position: relative;
+    /* popup의 기준 */
+}
+
+.p_box2 ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_box2 ul li {
+    height: 1070px;
+}
+
+.p_box2 ul li:nth-child(1) {
+    background: url(../images/portfolio4.png) no-repeat left 0px bottom 56px;
+    width: 470px;
+}
+
+.p_box2 ul li:nth-child(1) p {
+    padding: 60px 0;
+}
+
+.cover3 {
+    width: 470px;
+    height: 600px;
+    position: absolute;
+    bottom: 56px;
+    left: 50px;
+    padding: 270px 0px 0px 140px;
+    box-sizing: border-box;
+}
+
+.cover4{
+    width: 640px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    padding: 340px 0px 0px 220px;
+    box-sizing: border-box;
+}
+
+.p_box2_img {
+    background: url(../images/portfolio3.png) no-repeat right 0 top 0;
+    width: 640px;
+    height: 800px;
+}
+
+.p_box2_p {
+    height: 100px;
+    margin-top: 120px;
+    margin-left: 40px;
+}
+
+/* ----------popup3,4---------- */
+
+.popup3 {
+    height: 800px;
+    width: 1220px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    background: #fff url(../images/portfolio3.png) no-repeat right 0 center;
+    padding: 250px 0 0 100px;
+    box-sizing: border-box;
+    z-index: 8;
+    box-shadow: 0px 0px 10px #adadad;
+}
+
+.close3 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+.popup4 {
+    height: 600px;
+    width: 1160px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 56px;
+    left: 50px;
+    background: #fff url(../images/portfolio4.png) no-repeat left 0 center;
+    padding: 150px 0 0 570px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #adadad;
+}
+
+.close4 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+/* ========p_box3======= */
+
+.p_box3 {
+    height: 600px;
+    width: 1320px;
+    margin-top: 50px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.p_box3 ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_box3 ul li:nth-child(1) {
+    background: url(../images/portfolio5.png) no-repeat center;
+    width: 550px;
+    height: 600px;
+}
+.cover5{
+    width: 550px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    padding: 275px 0px 0px 175px;
+    box-sizing: border-box;
+}
+
+.p_box3 ul li:nth-child(2) {
+    width: 600px;
+}
+
+.p_box3 ul li:nth-child(2) p {
+    padding-top: 250px;
+}
+
+/* ---------popup5------- */
+
+.popup5 {
+    height: 600px;
+    width: 1220px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    background: #fff url(../images/portfolio5.png) no-repeat left 0 center;
+    padding: 150px 0 0 650px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #adadad;
+}
+
+.close5 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+
+/* ========p_box4======= */
+
+.p_box4 {
+    width: 1320px;
+    height: 550px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.p_box4 ul li:nth-child(1) {
+    background: url(../images/portfolio6.png) no-repeat center;
+    width: 1050px;
+    height: 300px;
+    margin-left: 135px;
+    margin-bottom: 80px;
+    position: relative;
+    /* button6의 기준상자 */
+}
+
+.cover6{
+    width: 1050px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 125px 0px 0px 425px;
+    box-sizing: border-box;
+}
+
+/* ---------popup6------- */
+
+.popup6 {
+    height: 630px;
+    width: 1050px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff url(../images/portfolio6.png) no-repeat left 0 top 0;
+    padding-top: 325px;
+    box-sizing: border-box;
+    display: block;
+    box-shadow: 0px 0px 10px #adadad;
+}
+
+.popup6>h6:hover {
+    background: url(../images/go_link.png) no-repeat right 300px center;
+}
+
+.popup6>h5:hover {
+    background: url(../images/go_link.png) no-repeat right 300px center;
+}
+
+.popup6>h4:hover {
+    background: url(../images/go_link.png) no-repeat right 300px center;
+}
+
+.close6 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+/* ===========================================footer_wrap====================== */
+
+#footer_wrap {
+    height: 400px;
+    background-color: #333;
+}
+
+.footer {
+    width: 1320px;
+    height: 400px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.footer_logo a img {
+    height: 50px;
+    padding-bottom: 40px;
+}
+
+.f_gnb {
+    display: flex;
+    float: left;
+}
+
+.f_gnb li a {
+    display: block;
+    color: #666666;
+    margin-right: 60px;
+    margin-bottom: 40px;
+}
+
+.f_gnb li a:hover {
+    color: #acacac;
+    text-decoration: underline;
+}
+
+.footer p {
+    color: #666666;
+    clear: both;
+}
+
+span {
+    font-size: small;
+}
+
+
+
+
+
+/* 메인페이지 오픈 */
+
+
+body{
+    background: white;
+}
+
+.page-transition{
+
+    animation: revealPage 1.3s ease forwards;
+
+    opacity: 0;
+}
+
+@keyframes revealPage{
+
+    0%{
+        opacity: 0;
+        filter: blur(14px);
+    }
+
+    100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+}

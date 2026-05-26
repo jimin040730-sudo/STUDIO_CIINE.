@@ -1,0 +1,637 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+     font-family: 'Suit';
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* 마우스 커서 */
+
+.custom-cursor{
+  width:28px;
+  height:28px;
+  border:1px solid rgba(216, 216, 216, 0.9);
+  border-radius:50%;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  pointer-events:none;
+  z-index:999999;
+
+  transform:translate(-50%,-50%);
+
+  transition:
+    width .3s ease,
+    height .3s ease,
+    background .3s ease;
+
+  backdrop-filter: blur(1.5px);
+}
+
+.custom-cursor.active{
+  width:70px;
+  height:70px;
+  background:rgba(255,255,255,.05);
+}
+
+/* ==============================header_wrap============================ */
+
+#header_wrap {
+    height: 60px;
+    background-color: #ffffffcc;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    height: 60px;
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.logo a img {
+    height: 40px;
+}
+
+.util {
+    display: flex;
+}
+
+.util>li>a {
+    display: block;
+    padding: 8px 0px 16px 0px;
+    width: 150px;
+    border-bottom: 1px solid #ffffff00;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.util>li>a:hover {
+    font-weight: bold;
+}
+
+.SMN_effect-49 a {
+  transition: 0.35s;
+}
+
+.SMN_effect-49 a:hover {
+  text-shadow: 0 0 20px #000000;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* submenu */
+
+.submenu {
+    width: 100%;
+    display: none;
+}
+
+.submenu>li>a {
+    display: block;
+    background-color: #ffffffd2;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.submenu>li>a:hover {
+    background-color: #ffffff93;
+    border-bottom: 1px solid #888888;
+    font-weight: 600;
+}
+
+.util>li:hover .submenu {
+    display: block;
+}
+
+.gnb>li:hover .submenu {
+    display: block;
+}
+
+/* =======================best_wrap=========================== */
+
+#best_wrap {
+    height: 850px;
+    padding-top: 60px;
+}
+
+.best {
+    height: 850px;
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 40px;
+    padding: 150px 0px 100px 100px;
+    letter-spacing: 3px;
+}
+
+.b_box {
+    display: flex;
+    width: 3600px;
+}
+
+.b_box li {
+    width: 100%;
+    height: 500px;
+}
+
+.b_box li .b_img {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+}
+
+.b_img a img{
+    transition: all 0.4s;
+}
+
+.b_box li:hover .b_img a img {
+    transform: scale(1.1, 1.1);
+    transition: all 0.4s;
+}
+
+.img_track {
+    animation: flow 25s linear infinite reverse;
+}
+
+@keyframes flow {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.b_box>li>h4{
+    text-align: left;
+}
+
+h4 {
+    padding: 15px 0px 3px 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+h5 {
+    font-size: 14px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: #858585;
+}
+
+/* =====================text_flow_wrap======================= */
+
+#wrap {
+    font-size: 100px;
+    font-weight: bold;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flow 20s linear infinite reverse;
+    white-space: nowrap;
+    /* 한줄을 그대로 보존해 준다 */
+}
+
+.text_flow {
+    display: flex;
+}
+
+.text_flow p {
+    font-size: 30px;
+    margin: 20px 60px;
+}
+
+.text_flow img {
+    height: 20px;
+    padding-top: 25px;
+}
+
+
+@keyframes flow {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* =======================product_wrap========================== */
+
+#product_wrap {
+    height: auto;
+}
+
+.h2_box {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.product_box1 {
+    width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+h2 {
+    font-size: 40px;
+    padding: 150px 0px 100px 100px;
+    letter-spacing: 3px;
+}
+
+.gnb_wrap {
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+
+.gnb_box {
+    height: 100px;
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px 0 0;
+    box-sizing: border-box;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb>li:nth-child(6) a {
+    width: 230px;
+    box-sizing: border-box;
+}
+
+.gnb>li{
+    position: relative;
+}
+
+.gnb>li>a {
+    display: block;
+    font-size: 24px;
+    padding-top: 21px;
+    padding-bottom: 34px;
+    width: 120px;
+    text-align: center;
+}
+
+.gnb>li>a:hover {
+    font-weight: 600;
+    border-bottom: 2px solid #333;
+}
+
+/* submenu */
+
+.p_sub {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 84px;
+    left: 0;
+    z-index: 15;
+}
+
+.p_sub>li>a {
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.p_sub>li>a:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #888888;
+    font-weight: 600;
+}
+
+.gnb>li:hover .p_sub {
+    display: block;
+}
+
+.search_bar {
+    width: 400px;
+    height: 60px;
+    padding: 20px 30px 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* .search_bar a img의 기준 */
+    /* background: url(../images/search.png)no-repeat right 30px center; */
+}
+
+.search_bar a img {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}
+
+.search_bar input {
+    border: none;
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+}
+
+.search_bar input::placeholder {
+    color: #ddd;
+}
+
+/* 스와이퍼 */
+
+.card a img {
+    width: 100%;
+    height: 420px;
+}
+
+.card .swiper-slide h1 {
+    padding: 20px 0 6px 0;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.card .swiper-slide p {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.news {
+    width: 1200px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.swiper-button-prev {
+    left: -50px;
+    right: auto;
+}
+
+.swiper-button-next {
+    right: -50px;
+    left: auto;
+}
+
+/*높이가 다른 슬라이드들을 세로 가운데가 맞게 해줌*/
+.card .swiper-wrapper {
+    align-items: center;
+}
+
+/*지금 현재 가운데 보이고 있는 슬라이드는 .swiper-slide-active 라는 클래스를 가지는데 이를 이용해 스타일을 꾸며줌. */
+.card .swiper-slide {
+    transform: scale(0.7);
+    opacity: 0.3;
+}
+
+.card .swiper-slide-prev,
+.card .swiper-slide-next {
+    transform: scale(0.85);
+    opacity: 0.7;
+}
+
+.card .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s;
+
+
+}
+
+.card .swiper-slide .text {
+    display: none;
+}
+
+.card .swiper-slide-active .text {
+    display: block;
+}
+
+/*불릿모양. swiper-pagination-bullet-active 클래스가 현재 색상이 들어간 부분 나타냄*/
+.swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 4px;
+}
+
+.img4_box ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.img2_box ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.img3_box ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+/* ==========middle_banner============ */
+.middle_banner {
+    height: 700px;
+    background: url(../images/middle_banner.png) no-repeat center;
+    background-attachment: fixed;
+    /* 배경에 붙어있는 이미지 */
+    margin: 100px 0;
+
+}
+
+.button_box {
+    height: 700px;
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    /* .button의 기준 */
+}
+
+.button_box>h1 {
+    text-align: right;
+    padding: 280px 100px 0 0;
+}
+
+.button {
+    width: 180px;
+    height: 50px;
+    box-sizing: border-box;
+    background: #ffffff60 url(../images/arrow_hover_b.png) no-repeat right 14px center;
+    box-sizing: border-box;
+    padding: 13px 0 0 15px;
+    position: absolute;
+    top: 340px;
+    right: 100px;
+}
+
+.button:hover {
+    background-color: #ffffffb4;
+}
+
+.button a {
+    font-size: 22px;
+}
+
+/* ==============product_box2============ */
+
+.product_box2 {
+    width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.more{
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #333;
+    background-color: #fff;
+    margin-top: 150px;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.more:hover{
+background-color: #333;
+color: #fff;
+transition: all 0.3s;
+}
+
+.more_box{
+    width: 1320px;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* ===========================================footer_wrap====================== */
+
+#footer_wrap {
+    height: 400px;
+    background-color: #333;
+}
+
+.footer {
+    width: 1320px;
+    height: 400px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.footer_logo a img {
+    height: 50px;
+    padding-bottom: 40px;
+}
+
+.f_gnb {
+    display: flex;
+    float: left;
+}
+
+.f_gnb li a {
+    display: block;
+    color: #666666;
+    margin-right: 60px;
+    margin-bottom: 40px;
+}
+
+.f_gnb li a:hover {
+    color: #acacac;
+    text-decoration: underline;
+}
+
+.footer p {
+    color: #666666;
+    clear: both;
+}
+
+span {
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+/* 메인페이지 오픈 */
+
+
+body{
+    background: white;
+}
+
+.page-transition{
+
+    animation: revealPage 1.3s ease forwards;
+
+    opacity: 0;
+}
+
+@keyframes revealPage{
+
+    0%{
+        opacity: 0;
+        filter: blur(14px);
+    }
+
+    100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+}

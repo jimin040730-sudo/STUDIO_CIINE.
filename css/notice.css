@@ -191,7 +191,8 @@ body {
 .refund>li {
     width: 660px;
     height: 530px;
-    padding: 0 40px;
+    padding: 30px 40px 0 40px;
+    box-sizing: border-box;
 }
 
 .refund li:nth-child(1) {
